@@ -88,6 +88,8 @@ $enlace['default'] = array(
     'failover' => array(),
     'save_queries' => TRUE
 );
+
+$enlace = new mysqli($enlace['default']);
 //echo "Success: A proper connection to MySQL was made! The  database is great." . PHP_EOL;
 //echo "Host information: " . mysqli_get_host_info($enlace) . PHP_EOL;
 
