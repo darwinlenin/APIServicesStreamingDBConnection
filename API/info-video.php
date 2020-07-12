@@ -11,7 +11,7 @@ include_once('../comun/db.php');
 function obtener_info($id){
 
     global $enlace;
-    var $todosLosVideos;
+    $todosLosVideos = null;
 
     $resultado =  mysqli_query( $enlace ,"SELECT * FROM videos WHERE id= '".$id."'");
 
@@ -23,7 +23,7 @@ function obtener_info($id){
 
 }
 
-var $resultados;
+$resultados = null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' ) {
 
