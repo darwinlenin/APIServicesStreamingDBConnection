@@ -43,6 +43,40 @@ INSERT INTO `videos` (`id`, `titulo`, `descripcion`, `video_src`, `imagen_src`, 
 ('123', 'Mi video', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '0ade473ec2b1c81b516e079252909d00.mp4', 'BBde473ec2b1c81b516e079252909d00.png', 1),
 ('345', 'Mi video 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '0ade473ec2b1c81b516e079252909d00.mp4', '0ade473ec2b1c81b516e079252909d83.png', 2);
 
+
+UPDATE heroku_0af1e6e8cd1d76c.videos
+SET videos.titulo='Unity Photon tutorial part 1',
+    videos.descripcion='configuration of photon multiplayer game',
+    videos.video_src='photonpart1.mp4',
+    videos.imagen_src='photonpart1.png'
+WHERE videos.uniqueID=1;
+
+
+UPDATE heroku_0af1e6e8cd1d76c.videos
+SET videos.titulo='Unity Photon tutorial part 2',
+    videos.descripcion='configuration of photon multiplayer game synchronized players',
+    videos.video_src='photonplayerenglish.mp4',
+    videos.imagen_src='photonplayerenglish.png'
+WHERE videos.uniqueID=2;
+
+INSERT INTO heroku_0af1e6e8cd1d76c.videos (`id`, `titulo`, `descripcion`, `video_src`, `imagen_src`, `uniqueID`)
+VALUES ('3',
+        'Introduction to Unity',
+        'Introduction of Unity Engine Platform and basic animation os object and player scene.',
+        'VideoDemostrativoUnity.mp4',
+        'VideoDemostrativoUnity.png',
+        3), ('4',
+             'Materials Animation and Substances in Unity',
+             'Configuration of Unity engine and animation basic to enable controls of object in the editor. furthermore we attach materials and sahders of allegorithmic substance.',
+             'demo2unity.mp4',
+             'demo2unity.png',
+             4), ('5',
+                  'Introduction to Phaser.JS WebGL HTML5 Snake Game',
+                  'Discover with us how to create a classic video game (Snake Game) focused on WebGL with the JavaScript game development framework Phaser.JS enjoy it and share it.',
+                  'PhaserSnakeProject.mp4',
+                  'PhaserSnakeProject.png',
+                  5);
+
 --
 -- Indexes for dumped tables
 --
@@ -65,3 +99,7 @@ ALTER TABLE `videos`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
