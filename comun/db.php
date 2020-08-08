@@ -10,5 +10,6 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 
 $enlace = new mysqli($server, $username, $password, $db);
+$enlace->set_charset("utf8");
 
 ?>
